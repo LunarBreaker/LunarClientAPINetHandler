@@ -12,12 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketNametagsOverride extends LCPacket {
 
-    @Getter
     private UUID player;
-    @Getter
     private List<String> tags;
     
     @Override

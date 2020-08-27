@@ -8,27 +8,18 @@ import lombok.Getter;
 import java.beans.ConstructorProperties;
 import java.io.IOException;
 
+@Getter
 public class LCPacketWorldBorderCreateNew extends LCPacket {
 
-    @Getter
     private String id;
-    @Getter
     private String world;
-    @Getter
     private boolean cancelsEntry;
-    @Getter
     private boolean cancelsExit;
-    @Getter
     private boolean canShrinkExpand;
-    @Getter
     private int color;
-    @Getter
     private double minX;
-    @Getter
     private double minZ;
-    @Getter
     private double maxX;
-    @Getter
     private double maxZ;
 
     public LCPacketWorldBorderCreateNew() {

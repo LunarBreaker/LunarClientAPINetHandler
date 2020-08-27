@@ -10,10 +10,9 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-@AllArgsConstructor
+@AllArgsConstructor @Getter
 public class LCPacketStaffModStatus extends LCPacket {
 
-    @Getter
     private final Set<String> enabled;
     
     public LCPacketStaffModStatus() {

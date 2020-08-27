@@ -12,18 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketHologram extends LCPacket {
 
-    @Getter
     private UUID uuid;
-    @Getter
     private double x;
-    @Getter
     private double y;
-    @Getter
     private double z;
-    @Getter
     private List<String> lines;
     
     @Override

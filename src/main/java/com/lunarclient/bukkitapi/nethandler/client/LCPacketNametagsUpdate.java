@@ -10,10 +10,9 @@ import lombok.NoArgsConstructor;
 import java.io.IOException;
 import java.util.*;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketNametagsUpdate extends LCPacket {
 
-    @Getter
     private Map<UUID, List<String>> playersMap;
     
     @Override

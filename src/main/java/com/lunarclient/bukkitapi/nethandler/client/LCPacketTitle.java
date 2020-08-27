@@ -9,20 +9,14 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketTitle extends LCPacket {
 
-    @Getter
     private String type;
-    @Getter
     private String message;
-    @Getter
     private float scale;
-    @Getter
     private long displayTimeMs;
-    @Getter
     private long fadeInTimeMs;
-    @Getter
     private long fadeOutTimeMs;
     
     public LCPacketTitle(String type, String message, long displayTimeMs, long fadeInTimeMs, long fadeOutTimeMs) {

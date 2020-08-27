@@ -10,10 +10,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketVoiceChannelRemove extends LCPacket {
 
-    @Getter
     private UUID uuid;
     
     @Override

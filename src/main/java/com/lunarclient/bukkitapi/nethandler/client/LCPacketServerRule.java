@@ -8,17 +8,13 @@ import lombok.Getter;
 
 import java.io.IOException;
 
+@Getter
 public class LCPacketServerRule extends LCPacket {
 
-    @Getter
     private ServerRule rule;
-    @Getter
     private int intValue;
-    @Getter
     private float floatValue;
-    @Getter
     private boolean booleanValue;
-    @Getter
     private String stringValue;
     
     public LCPacketServerRule() {

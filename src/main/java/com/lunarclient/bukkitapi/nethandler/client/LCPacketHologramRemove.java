@@ -10,10 +10,9 @@ import lombok.NoArgsConstructor;
 import java.io.IOException;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketHologramRemove extends LCPacket {
 
-    @Getter
     private UUID uuid;
     
     @Override

@@ -21,8 +21,7 @@ public abstract class LCPacket {
 
     private static final Map<Class, Integer> classToId;
     private static final Map<Integer, Class> idToClass;
-    @Getter
-    private Object attachment;
+    @Getter private Object attachment;
     
     public static LCPacket handle(byte[] data) {
         return handle(data, null);
@@ -38,8 +37,7 @@ public abstract class LCPacket {
                 packet.attach(attachment);
                 packet.read(wrappedBuffer);
                 return packet;
-            }
-            catch (IOException | InstantiationException | IllegalAccessException ex) {
+            }catch (IOException | InstantiationException | IllegalAccessException ex) {
                 ex.printStackTrace();
             }
         }

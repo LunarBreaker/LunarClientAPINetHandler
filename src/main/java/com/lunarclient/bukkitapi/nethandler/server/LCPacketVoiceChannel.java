@@ -12,16 +12,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketVoiceChannel extends LCPacket {
 
-    @Getter
     private UUID uuid;
-    @Getter
     private String name;
-    @Getter
     private Map<UUID, String> players;
-    @Getter
     private Map<UUID, String> listening;
     
     @Override

@@ -12,8 +12,7 @@ import java.util.Objects;
 public class ModSettings {
 
     public static Gson GSON;
-    @Getter
-    private final Map<String, ModSetting> modSettings;
+    @Getter private final Map<String, ModSetting> modSettings;
     
     public ModSettings() {
         this.modSettings = new HashMap<>();
@@ -32,12 +31,10 @@ public class ModSettings {
         GSON = new Gson();
     }
 
-    @AllArgsConstructor @NoArgsConstructor
+    @AllArgsConstructor @NoArgsConstructor @Getter
     public static class ModSetting {
 
-        @Getter
         private boolean enabled;
-        @Getter
         private Map<String, Object> properties;
         
         @Override

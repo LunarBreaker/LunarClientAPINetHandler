@@ -11,12 +11,10 @@ import lombok.NoArgsConstructor;
 import java.io.IOException;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketVoiceMute extends LCPacket {
 
-    @Getter
     private UUID muting;
-    @Getter
     private int volume;
     
     public LCPacketVoiceMute(UUID muting) {

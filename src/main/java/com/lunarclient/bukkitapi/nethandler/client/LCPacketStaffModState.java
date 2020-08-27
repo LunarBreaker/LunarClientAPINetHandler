@@ -9,12 +9,10 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketStaffModState extends LCPacket {
 
-    @Getter
     private String mod;
-    @Getter
     private boolean state;
     
     @Override

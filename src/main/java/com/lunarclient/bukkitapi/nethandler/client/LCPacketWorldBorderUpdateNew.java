@@ -9,26 +9,17 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketWorldBorderUpdateNew extends LCPacket {
 
-    @Getter
     private String id;
-    @Getter
     private double minX;
-    @Getter
     private double minZ;
-    @Getter
     private double maxX;
-    @Getter
     private double maxZ;
-    @Getter
     private int durationTicks;
-    @Getter
     private boolean cancelsEntry;
-    @Getter
     private boolean cancelsExit;
-    @Getter
     private int color;
     
     @Override

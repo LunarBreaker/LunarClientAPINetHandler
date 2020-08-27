@@ -9,14 +9,11 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketBossBar extends LCPacket {
 
-    @Getter
     private int action;
-    @Getter
     private String text;
-    @Getter
     private float health;
     
     @Override

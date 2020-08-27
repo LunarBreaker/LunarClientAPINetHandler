@@ -9,10 +9,9 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketWorldBorderRemove extends LCPacket {
 
-    @Getter
     private String id;
     
     @Override

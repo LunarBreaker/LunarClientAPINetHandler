@@ -9,14 +9,11 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketCooldown extends LCPacket {
 
-    @Getter
     private String message;
-    @Getter
     private long durationMs;
-    @Getter
     private int iconId;
     
     @Override

@@ -12,14 +12,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketTeammates extends LCPacket {
 
-    @Getter
     private UUID leader;
-    @Getter
     private long lastMs;
-    @Getter
     private Map<UUID, Map<String, Double>> players;
     
     @Override

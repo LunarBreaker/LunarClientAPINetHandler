@@ -10,16 +10,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketVoiceChannelUpdate extends LCPacket {
 
-    @Getter
     public int status;
-    @Getter
     private UUID channelUuid;
-    @Getter
     private UUID uuid;
-    @Getter
     private String name;
     
     @Override

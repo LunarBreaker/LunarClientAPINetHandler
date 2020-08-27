@@ -8,12 +8,10 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketWaypointRemove extends LCPacket {
 
-    @Getter
     private String name;
-    @Getter
     private String world;
     
     @Override

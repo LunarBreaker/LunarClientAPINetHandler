@@ -13,12 +13,10 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketVoice extends LCPacket {
 
-    @Getter
     private Set<UUID> uuids;
-    @Getter
     private byte[] data;
     
     @Override

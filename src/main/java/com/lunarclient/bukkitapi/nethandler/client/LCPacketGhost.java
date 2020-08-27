@@ -12,12 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketGhost extends LCPacket {
 
-    @Getter
     private List<UUID> addGhostList;
-    @Getter
     private List<UUID> removeGhostList;
     
     @Override

@@ -11,10 +11,9 @@ import lombok.NoArgsConstructor;
 import java.io.IOException;
 import java.util.UUID;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketVoiceChannelSwitch extends LCPacket {
 
-    @Getter
     private UUID switchingTo;
     
     @Override

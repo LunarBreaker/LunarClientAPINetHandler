@@ -2,6 +2,7 @@ package com.lunarclient.bukkitapi.nethandler.client.obj;
 
 import lombok.Getter;
 
+@Getter
 public enum ServerRule {
     COMPETITIVE_GAME("competitiveGame", Boolean.class),
     LEGACY_ENCHANTING("legacyEnchanting", Boolean.class),
@@ -10,9 +11,7 @@ public enum ServerRule {
     SHADERS_DISABLED("shadersDisabled", Boolean.class),
     VOICE_ENABLED("voiceEnabled", Boolean.class);
 
-    @Getter
     private final String id;
-    @Getter
     private final Class type;
 
     ServerRule(String id, Class type) {

@@ -9,14 +9,11 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketNotification extends LCPacket {
 
-    @Getter
     private String message;
-    @Getter
     private long durationMs;
-    @Getter
     private String level;
     
     @Override

@@ -9,10 +9,9 @@ import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor @Getter
 public class LCPacketServerUpdate extends LCPacket {
 
-    @Getter
     private String server;
     
     @Override
