@@ -9,7 +9,8 @@ public enum ServerRule {
     MINIMAP_STATUS("minimapStatus", String.class),
     SERVER_HANDLES_WAYPOINTS("serverHandlesWaypoints", Boolean.class),
     SHADERS_DISABLED("shadersDisabled", Boolean.class),
-    VOICE_ENABLED("voiceEnabled", Boolean.class);
+    VOICE_ENABLED("voiceEnabled", Boolean.class),
+    LEGACY_COMBAT("legacyCombat", Boolean.class);
 
     private final String id;
     private final Class type;

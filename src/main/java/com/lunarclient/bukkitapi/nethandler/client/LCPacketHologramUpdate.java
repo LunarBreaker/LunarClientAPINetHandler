@@ -22,9 +22,9 @@ public class LCPacketHologramUpdate extends LCPacket {
     public void write(ByteBufWrapper buf) throws IOException {
         buf.writeUUID(this.uuid);
         buf.writeVarInt(this.lines.size());
-        for (String s : this.lines) {
-            buf.writeString(s);
-        }
+        this.lines.forEach(buf::writeString);
+        this.lines.forEach(buf::writeString);
+        this.lines.forEach(buf::writeString);
     }
     
     @Override

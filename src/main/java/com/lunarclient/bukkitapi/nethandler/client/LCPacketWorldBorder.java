@@ -3,11 +3,12 @@ package com.lunarclient.bukkitapi.nethandler.client;
 import com.lunarclient.bukkitapi.nethandler.ByteBufWrapper;
 import com.lunarclient.bukkitapi.nethandler.LCPacket;
 import com.lunarclient.bukkitapi.nethandler.shared.LCNetHandler;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.io.IOException;
 
-@Getter
+@AllArgsConstructor @Getter
 public class LCPacketWorldBorder extends LCPacket {
 
     private String id;
@@ -23,22 +24,9 @@ public class LCPacketWorldBorder extends LCPacket {
     public LCPacketWorldBorder() {
         this.color = -13421569;
     }
-    
-    public LCPacketWorldBorder(String id, String world, boolean cancelsExit, boolean canShrinkExpand, int color, double minX, double minZ, double maxX, double maxZ) {
-        this.color = -13421569;
-        this.id = id;
-        this.world = world;
-        this.cancelsExit = cancelsExit;
-        this.canShrinkExpand = canShrinkExpand;
-        this.color = color;
-        this.minX = minX;
-        this.minZ = minZ;
-        this.maxX = maxX;
-        this.maxZ = maxZ;
-    }
-    
+
     @Override
-    public void write(ByteBufWrapper buf) throws IOException {
+    public void write(final ByteBufWrapper buf) throws IOException {
         buf.buf().writeBoolean(this.id != null);
         if (this.id != null) {
             buf.writeString(this.id);
@@ -52,9 +40,9 @@ public class LCPacketWorldBorder extends LCPacket {
         buf.buf().writeDouble(this.maxX);
         buf.buf().writeDouble(this.maxZ);
     }
-    
+
     @Override
-    public void read(ByteBufWrapper buf) throws IOException {
+    public void read(final ByteBufWrapper buf) throws IOException {
         if (buf.buf().readBoolean()) {
             this.id = buf.readString();
         }

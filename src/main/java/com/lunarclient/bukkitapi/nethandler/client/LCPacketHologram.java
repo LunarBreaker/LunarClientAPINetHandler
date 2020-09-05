@@ -28,9 +28,7 @@ public class LCPacketHologram extends LCPacket {
         buf.buf().writeDouble(this.y);
         buf.buf().writeDouble(this.z);
         buf.writeVarInt(this.lines.size());
-        for (String s : this.lines) {
-            buf.writeString(s);
-        }
+        this.lines.forEach(buf::writeString);
     }
     
     @Override

@@ -40,9 +40,9 @@ public class LCPacketWorldBorderCreateNew extends LCPacket {
         this.maxX = maxX;
         this.maxZ = maxZ;
     }
-    
+
     @Override
-    public void write(ByteBufWrapper b) throws IOException {
+    public void write(final ByteBufWrapper b) throws IOException {
         b.buf().writeBoolean(this.id != null);
         if (this.id != null) {
             b.writeString(this.id);
@@ -57,9 +57,9 @@ public class LCPacketWorldBorderCreateNew extends LCPacket {
         b.buf().writeDouble(this.maxX);
         b.buf().writeDouble(this.maxZ);
     }
-    
+
     @Override
-    public void read(ByteBufWrapper b) throws IOException {
+    public void read(final ByteBufWrapper b) throws IOException {
         if (b.buf().readBoolean()) {
             this.id = b.readString();
         }

@@ -38,10 +38,10 @@ public class LCPacketVoiceChannel extends LCPacket {
     
     private void writeMap(ByteBufWrapper b, Map<UUID, String> players) {
         b.writeVarInt(players.size());
-        for (Map.Entry<UUID, String> player : players.entrySet()) {
+        players.entrySet().forEach(player -> {
             b.writeUUID(player.getKey());
             b.writeString(player.getValue());
-        }
+        });
     }
     
     private Map<UUID, String> readMap(ByteBufWrapper b) {

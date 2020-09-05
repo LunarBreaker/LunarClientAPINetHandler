@@ -2,10 +2,10 @@ package com.lunarclient.bukkitapi.nethandler.shared;
 
 public interface LCNetHandler {
 
-    void handleAddWaypoint(LCPacketWaypointAdd p0);
+    void handleAddWaypoint(LCPacketWaypointAdd packet);
     
-    void handleRemoveWaypoint(LCPacketWaypointRemove p0);
+    void handleRemoveWaypoint(LCPacketWaypointRemove packet);
     
-    void handleEmote(LCPacketEmoteBroadcast p0);
+    void handleEmote(LCPacketEmoteBroadcast packet);
 
 }

@@ -24,9 +24,7 @@ public class LCPacketNametagsOverride extends LCPacket {
         buf.buf().writeBoolean(this.tags != null);
         if (this.tags != null) {
             buf.writeVarInt(this.tags.size());
-            for (String tag : this.tags) {
-                buf.writeString(tag);
-            }
+            this.tags.forEach(buf::writeString);
         }
     }
     

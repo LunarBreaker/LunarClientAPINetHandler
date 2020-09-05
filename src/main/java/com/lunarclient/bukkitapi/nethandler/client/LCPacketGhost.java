@@ -21,13 +21,9 @@ public class LCPacketGhost extends LCPacket {
     @Override
     public void write(ByteBufWrapper buf) throws IOException {
         buf.writeVarInt(this.addGhostList.size());
-        for (UUID uuid : this.addGhostList) {
-            buf.writeUUID(uuid);
-        }
+        this.addGhostList.forEach(buf::writeUUID);
         buf.writeVarInt(this.removeGhostList.size());
-        for (UUID uuid : this.removeGhostList) {
-            buf.writeUUID(uuid);
-        }
+        this.removeGhostList.forEach(buf::writeUUID);
     }
     
     @Override

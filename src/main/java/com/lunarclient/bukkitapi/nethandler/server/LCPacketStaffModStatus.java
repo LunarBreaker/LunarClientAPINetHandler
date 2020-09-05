@@ -22,9 +22,7 @@ public class LCPacketStaffModStatus extends LCPacket {
     @Override
     public void write(ByteBufWrapper buf) throws IOException {
         buf.writeVarInt(this.enabled.size());
-        for (String mod : this.enabled) {
-            buf.writeString(mod);
-        }
+        this.enabled.forEach(buf::writeString);
     }
     
     @Override
